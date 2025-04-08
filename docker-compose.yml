@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  book-api:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./books.db:/root/books.db
+    environment:
+      - PORT=3000

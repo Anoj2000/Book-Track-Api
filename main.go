@@ -38,8 +38,11 @@ func main() {
 	api.Post("/books", bookHandler.CreateBook)
 	api.Get("/books", bookHandler.GetAllBooks)
 	api.Get("/books/:id", bookHandler.GetBookByID)
+	api.Get("/books/paginated", bookHandler.GetBooksPaginated)
+	api.Get("/books/search", bookHandler.SearchBooks)
 	api.Put("/books/:id", bookHandler.UpdateBook)
 	api.Delete("/books/:id", bookHandler.DeleteBook)
+	api.Delete("/books", bookHandler.DeleteAllBooks) // Add this line
 
 	// Start server
 	app.Listen(":3000")
