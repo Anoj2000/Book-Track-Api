@@ -10,12 +10,24 @@ A high-performance REST API for book management built with Go, Fiber, and SQLite
 ## Features
 
 - **Full CRUD Operations**
-- **JWT Authentication** (Ready to implement)
 - **Advanced Search** by title/author
 - **Pagination** with page size control
 - **Docker** containerization
 - **Unit Tests** with 85%+ coverage
 - **Swagger Documentation**
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Go 1.23+
+- SQLite3
+- Docker (optional)
+
+### Installation
+```bash
+git clone https://github.com/yourusername/book-api.git
+cd book-api
+go mod download
 
 ## Tech Stack
 
@@ -36,22 +48,3 @@ A high-performance REST API for book management built with Go, Fiber, and SQLite
 | GET    | `/api/books/paginated`  | Get paginated results           |
 | GET    | `/api/books/search`     | Search books by title/author    |
 | DELETE | `/api/books`            | Delete all books (Admin only)   |
-
-## Request/Response Examples
-
-**Create Book:**
-```json
-POST /api/books
-{
-  "title": "Clean Code",
-  "author": "Robert C. Martin",
-  "year": 2008
-}
-
-Response (201 Created):
-{
-  "id": 1,
-  "title": "Clean Code",
-  "author": "Robert C. Martin",
-  "year": 2008
-}
